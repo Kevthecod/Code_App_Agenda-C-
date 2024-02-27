@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ProjetCalendar" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ProjetCalendar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswd" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswd" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw31u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ProjetCalendar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/msw" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/msw" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw31u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-Winvalid-pch" />
+			<Add option="-include wx_pch.h" />
+			<Add option="-DWX_PRECOMP" />
+			<Add option="-Wall" />
+			<Add directory="$(#wx)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="AgendaDialog.cpp" />
+		<Unit filename="AgendaDialog.h" />
+		<Unit filename="AgendaFrame.cpp" />
+		<Unit filename="AgendaFrame.h" />
+		<Unit filename="CalendarFrame.cpp" />
+		<Unit filename="CalendarFrame.h" />
+		<Unit filename="DialogCalendrier.cpp" />
+		<Unit filename="DialogCalendrier.h" />
+		<Unit filename="Noyau.cpp" />
+		<Unit filename="Noyau.h" />
+		<Unit filename="ProjetCalendarApp.cpp" />
+		<Unit filename="ProjetCalendarApp.h" />
+		<Unit filename="ProjetCalendarMain.cpp" />
+		<Unit filename="ProjetCalendarMain.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wx_pch.h">
+			<Option compile="1" />
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="wxsmith/AgendaDialog.wxs" />
+		<Unit filename="wxsmith/AgendaFrame.wxs" />
+		<Unit filename="wxsmith/CalendarFrame.wxs" />
+		<Unit filename="wxsmith/DialogCalendrier.wxs" />
+		<Unit filename="wxsmith/ProjetCalendarframe.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="ProjetCalendarApp.cpp" main="ProjetCalendarFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/ProjetCalendarframe.wxs" src="ProjetCalendarMain.cpp" hdr="ProjetCalendarMain.h" fwddecl="0" i18n="1" name="ProjetCalendarFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/CalendarFrame.wxs" src="CalendarFrame.cpp" hdr="CalendarFrame.h" fwddecl="0" i18n="1" name="CalendarFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogCalendrier.wxs" src="DialogCalendrier.cpp" hdr="DialogCalendrier.h" fwddecl="0" i18n="1" name="DialogCalendrier" language="CPP" />
+					<wxFrame wxs="wxsmith/AgendaFrame.wxs" src="AgendaFrame.cpp" hdr="AgendaFrame.h" fwddecl="0" i18n="1" name="AgendaFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/AgendaDialog.wxs" src="AgendaDialog.cpp" hdr="AgendaDialog.h" fwddecl="0" i18n="1" name="AgendaDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
